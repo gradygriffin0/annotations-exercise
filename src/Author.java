@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Author extends Person {
+    @SuppressWarnings("all")
     private List books;
 
     public Author(String firstName, String lastName) {
@@ -30,6 +31,7 @@ public class Author extends Person {
 
     @Override
     public String fullName() {
-        return String.format("%s, %s", firstName, lastName);
+
+        return String.format("%s, %s", super.firstName, super.lastName);
     }
 }
